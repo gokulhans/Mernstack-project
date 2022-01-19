@@ -17,11 +17,6 @@ const customMiddleware = (req, res, next) => {
     next()
 }
 
-app.get('/', (req, res) => {
-    console.log("home");
-    res.send("hello world")
-})
-
 app.get('/about', customMiddleware, (req, res) => {
     console.log("about");
     res.send("hello about")
