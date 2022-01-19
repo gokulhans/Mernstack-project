@@ -21,7 +21,7 @@ app.get('/about', customMiddleware, (req, res) => {
     console.log("about");
     res.send("hello about")
 })
-
+ 
 // server listening
 
 app.listen(process.env.PORT || PORT, () => {
