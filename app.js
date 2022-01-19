@@ -1,10 +1,10 @@
-if (process.env.NODE_ENV !== 'production', () => {
+if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
-})
+}
 
-const express = require('express')
-const app = express()
-const PORT = 5000
+const express = require('express');
+const app = express();
+const PORT = 5000;
 const db = require('./connection');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -37,7 +37,7 @@ if (process.env.NODE_ENV == 'production') {
     app.use(express.static('client/build'));
     const path = require('path')
     app.get('*', function (req, res) {
-        res.sendFile(path.resolve(__dirname, 'client' , 'build', 'index.html'));
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
 }
 
