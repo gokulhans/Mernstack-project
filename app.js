@@ -11,6 +11,7 @@ const usersRouter = require('./routes/users');
 
 app.use('/users', usersRouter)
 app.use('/index', indexRouter)
+app.use(express.json())
 
 const customMiddleware = (req, res, next) => {
     console.log("middleware exucuted");
