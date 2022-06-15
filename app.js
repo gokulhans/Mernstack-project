@@ -13,6 +13,10 @@ app.use('/users', usersRouter)
 app.use('/index', indexRouter)
 app.use(express.json())
 
+app.get("/api", (req, res) => {
+    res.json({ message: "Hello from server!" });
+  });
+
 const customMiddleware = (req, res, next) => {
     console.log("middleware exucuted");
     next()
