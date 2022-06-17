@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="" className="App-logo" alt="logo" />
+        <img src="" className="App-logo" alt="logfffo" />
         <p>{!data ? "Loading..." : data}</p>
       </header>
     </div>
