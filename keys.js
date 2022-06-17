@@ -1,3 +1,3 @@
 module.exports = {
-    MONGOURI:"mongodburi-paste-here"
-} 
+    MONGOURI:"mongodb://localhost:27017"
+}

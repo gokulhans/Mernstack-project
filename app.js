@@ -11,21 +11,16 @@ const usersRouter = require('./routes/users');
 
 app.use('/users', usersRouter)
 app.use('/index', indexRouter)
-app.use(express.json())
+app.use(express.json()) 
 
 app.get("/api", (req, res) => {
-    res.json({ message: "Hello from server!" });
+    res.json({ message: "Hello 44 from server!" });
   });
 
 const customMiddleware = (req, res, next) => {
     console.log("middleware exucuted");
     next()
 }
-
-app.get('/about', customMiddleware, (req, res) => {
-    console.log("about");
-    res.send("hello about")
-})
  
 // server listening
 
@@ -58,7 +53,6 @@ app.use(function (err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
-
     // render the error page
     res.status(err.status || 500);
     res.render('error');
