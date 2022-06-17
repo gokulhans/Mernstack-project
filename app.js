@@ -14,7 +14,7 @@ app.use('/index', indexRouter)
 app.use(express.json()) 
 
 app.get("/api", (req, res) => {
-    res.json({ message: "Hello 44 from server!" });
+    res.json({ message: "Hello!" });
   });
 
 const customMiddleware = (req, res, next) => {
